@@ -1,4 +1,10 @@
-<p align="center"><img src="static/gohugo.png"></p>
+<p align="center">
+<img src="https://img.shields.io/dub/l/vibe-d.svg">
+<img src="https://img.shields.io/docker/stars/_/raffaeldutra/docker-gohugo.svg">
+<img src="https://img.shields.io/docker/pulls/raffaeldutra/docker-gohugo.svg">
+<img src="https://img.shields.io/docker/automated/raffaeldutra/docker-gohugo.svg">
+<img src="https://img.shields.io/docker/build/raffaeldutra/docker-gohugo.svg">
+</p>
 
 ## Como publicar o site
 
