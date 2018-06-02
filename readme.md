@@ -6,23 +6,23 @@
 <img src="https://img.shields.io/docker/build/raffaeldutra/docker-gohugo.svg">
 </p>
 
-## Como publicar o site
+## How to publish your website
 
-Publicação de código, ou seja, transforma todos os arquivos.md para HTML
+Code publishment, convert all md files to HTML.
 
 ```bash
 docker run -it \
 -v $(pwd):/src \
--v $(pwd)/public:/src/public raffaeldutra/gohugo
+-v $(pwd)/public:/src/public raffaeldutra/docker-gohugo
 ```
 
-## Como rodar um servidor
+## How run a server
 
-Aqui é possível rodar Hugo em modo servidor
+Here is the how you can do it.
 
 ```bash
 docker run -it \
 -v $(pwd):/src \
 -v $(pwd)/public:/src/public \
--p 1313:1313 raffaeldutra/gohugo /gohugo.sh -s
+-p 1313:1313 raffaeldutra/docker-gohugo /gohugo.sh -s
 ```
