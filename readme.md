@@ -1,9 +1,6 @@
 # Gohugo Docker Image
 
-![!](https://img.shields.io/dub/l/vibe-d.svg) ![!](https://img.shields.io/docker/stars/raffaeldutra/docker-gohugo.svg) ![!](https://img.shields.io/docker/pulls/raffaeldutra/docker-gohugo.svg) ![!](https://img.shields.io/docker/automated/raffaeldutra/docker-gohugo.svg) ![!](https://img.shields.io/docker/build/raffaeldutra/docker-gohugo.svg) 
-
-
-## Docker Hub image repository
+![!](https://img.shields.io/dub/l/vibe-d.svg) ![!](https://img.shields.io/docker/stars/raffaeldutra/docker-gohugo.svg) ![!](https://img.shields.io/docker/pulls/raffaeldutra/docker-gohugo.svg) ![!](https://img.shields.io/docker/automated/raffaeldutra/docker-gohugo.svg) ![!](https://img.shields.io/docker/build/raffaeldutra/docker-gohugo.svg)
 
 You can find this image in the link below.
 
