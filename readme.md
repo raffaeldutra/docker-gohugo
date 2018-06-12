@@ -25,7 +25,7 @@ docker run -it \
 -v $(pwd)/public:/src/public raffaeldutra/docker-gohugo
 ```
 
-## How run a server
+## How to run a server
 
 Here is the how you can do it.
 
@@ -34,3 +34,10 @@ docker run -it \
 -v $(pwd):/src \
 -p 1313:1313 raffaeldutra/docker-gohugo /gohugo.sh -s
 ```
+## How to run a server in a different URL
+
+```bash
+docker run -it \
+-v $(pwd):/src \
+-e BASEURL=192.168.10.10 \
+-p 1313:1313 raffaeldutra/docker-gohugo /gohugo.sh -s

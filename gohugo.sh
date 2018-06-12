@@ -1,18 +1,6 @@
 #!/usr/bin/env sh
 # Rafael Dutra <raffaeldutra@gmail.com>
-# http://rafaeldutra.me
-
-# Se OS for Microsoft, utilizamos o endereço geralmente utilizado por ele
-# Atente que: se estiver utilizando Hyper-V, por favor adapte o código e
-# faça o Pull Request para abrangermos o maior número possível de Sistemas
-# Operacionais possíveis.
-if [ "${OSTYPE}"  = "msys" ]; then
-    url="http://192.168.99.100"
-# Em caso de o Sistema Operacional for algum Linux, Mac, FressBSD e etc
-# utilizamos o localhost
-else
-    url="http://localhost:1313"
-fi
+# https://rafaeldutra.me
 
 # -p para Publish (publicar conteúdo), ou seja, pega todos arquivos .md e
 # transforma para  HTML
@@ -35,8 +23,8 @@ elif [ "${1}" = "-s" ]; then
     --themesDir /src/themes \
     --contentDir /src/content \
     --ignoreCache \
-    --baseURL ${url}
+    --baseURL ${BASEURL}
 fi
 
 # Apenas informação para você saber em qual URL está rodando
-echo $url
+echo $BASEURL
