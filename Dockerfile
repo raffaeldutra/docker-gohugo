@@ -5,6 +5,7 @@ LABEL maintainer="Rafael Dutra <raffaeldutra@gmail.com>"
 
 ENV HUGO_VERSION 0.40.3
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_linux-64bit
+ENV BASEURL ${BASEURL:-localhost}
 
 # Install pygments (for syntax highlighting) and bash
 RUN apk update && apk add py-pygments curl && rm -rf /var/cache/apk/*
