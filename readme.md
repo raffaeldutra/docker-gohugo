@@ -6,7 +6,7 @@ You can find this image in the link below.
 
 [https://hub.docker.com/r/raffaeldutra/docker-gohugo](https://hub.docker.com/r/raffaeldutra/docker-gohugo/)
 
-# About content for your project
+# Regarding content for your project
 
 The simplest way is the better way, right? I hope so.
 
@@ -14,6 +14,19 @@ For those who will use Linux:
 
 * You can share the "current" directory $(pwd) to /src folder inside of Docker container. This folder is used for Hugo.
 * To publish your project, you can use the "public" directory, or whatever you want, but you need to pass the /src/public directory, that's what Hugo expects, at least for now.
+
+## How to create a project
+
+Run the command below, but pay attention because it will create a new directory called "my-new-website". Change this for what you want.
+
+```bash
+docker run --rm -d \
+-v $(pwd):/my-new-project \
+raffaeldutra/docker-gohugo \
+/usr/local/bin/hugo new site /my-new-project/my-new-website
+```
+
+Once created, go to this new directory "my-new-website" and download your template as usual.
 
 ## How to publish your website
 
