@@ -6,7 +6,7 @@ You can find this image in the link below.
 
 [https://hub.docker.com/r/raffaeldutra/docker-gohugo](https://hub.docker.com/r/raffaeldutra/docker-gohugo/)
 
-# Content for your project
+## Content for your project
 
 The simplest way is the better way, right? I hope so.
 
