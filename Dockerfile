@@ -3,7 +3,7 @@ FROM alpine:3.4
 LABEL description="Docker container for building static sites with the Hugo."
 LABEL maintainer="Rafael Dutra <raffaeldutra@gmail.com>"
 
-ENV HUGO_VERSION 0.40.3
+ENV HUGO_VERSION 0.46
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_linux-64bit
 ENV BASEURL ${BASEURL:-localhost}
 
