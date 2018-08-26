@@ -6,19 +6,19 @@
 # transforma para  HTML
 if [ "${1}" = "-p" ]; then
     hugo \
-    --config /src/config.toml \
+    --config /src/config.toml,/src/config-docker.toml \
     --layoutDir /src/layouts \
     --themesDir /src/themes \
     --contentDir /src/content \
     --ignoreCache \
     --destination /src/public
 
-# -p para Server (rodar servidor)
+# -s para Server (rodar servidor)
 elif [ "${1}" = "-s" ]; then
     hugo server \
     --watch true \
     --bind 0.0.0.0 \
-    --config /src/config.toml \
+    --config /src/config.toml,/src/config-docker.toml \
     --layoutDir /src/layouts \
     --themesDir /src/themes \
     --contentDir /src/content \
