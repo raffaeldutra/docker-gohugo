@@ -4,9 +4,18 @@
 
 # -p para Publish (publicar conteúdo), ou seja, pega todos arquivos .md e
 # transforma para  HTML
+
+config=$2
+
+if [ ! -z "${config}" ]; then
+    hugoConfig="--config /src/config.toml,src/${config}"
+else
+    hugoConfig="--config /src/config.toml"
+fi
+
 if [ "${1}" = "-p" ]; then
     hugo \
-    --config /src/config.toml \
+    $hugoConfig \
     --layoutDir /src/layouts \
     --themesDir /src/themes \
     --contentDir /src/content \
@@ -16,9 +25,9 @@ if [ "${1}" = "-p" ]; then
 # -s para Server (rodar servidor)
 elif [ "${1}" = "-s" ]; then
     hugo server \
+    $hugoConfig \
     --watch true \
     --bind 0.0.0.0 \
-    --config /src/config.toml \
     --layoutDir /src/layouts \
     --themesDir /src/themes \
     --contentDir /src/content \
