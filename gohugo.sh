@@ -8,7 +8,7 @@
 config=$2
 
 if [ ! -z "${config}" ]; then
-    hugoConfig="--config /src/config.toml,src/${config}"
+    hugoConfig="--config /src/config.toml,/src/${config}"
 else
     hugoConfig="--config /src/config.toml"
 fi
