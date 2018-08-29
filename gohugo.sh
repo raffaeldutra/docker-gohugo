@@ -6,7 +6,7 @@
 # transforma para  HTML
 if [ "${1}" = "-p" ]; then
     hugo \
-    --config /src/config.toml,/src/config-docker.toml \
+    --config /src/config.toml \
     --layoutDir /src/layouts \
     --themesDir /src/themes \
     --contentDir /src/content \
@@ -18,7 +18,7 @@ elif [ "${1}" = "-s" ]; then
     hugo server \
     --watch true \
     --bind 0.0.0.0 \
-    --config /src/config.toml,/src/config-docker.toml \
+    --config /src/config.toml \
     --layoutDir /src/layouts \
     --themesDir /src/themes \
     --contentDir /src/content \
