@@ -15,6 +15,14 @@ For those who will use Linux:
 * You can share the "current" directory $(pwd) to /src folder inside of Docker container. This folder is used for Hugo.
 * To publish your project, you can use the "public" directory, or whatever you want, but you need to pass the /src/public directory, that's what Hugo expects, at least for now.
 
+IMPORTANT: Image tags are the same as GoHugo releaes.
+
+## Building an image
+
+```bash
+docker build -t raffaeldutra/docker-gohugo:<VERSION> .
+```
+
 ## How to create a project
 
 Run the command below, but pay attention because it will create a new directory called "my-new-website". Change this for what you want.
@@ -22,7 +30,7 @@ Run the command below, but pay attention because it will create a new directory 
 ```bash
 docker run --rm -d \
 -v $(pwd):/my-new-project \
-raffaeldutra/docker-gohugo \
+raffaeldutra/docker-gohugo:<VERSION> \
 /usr/local/bin/hugo new site /my-new-project/my-new-website
 ```
 
@@ -35,7 +43,7 @@ Code publishment, convert all md files to HTML.
 ```bash
 docker run -it \
 -v $(pwd):/src \
--v $(pwd)/public:/src/public raffaeldutra/docker-gohugo
+-v $(pwd)/public:/src/public raffaeldutra/docker-gohugo:<VERSION>
 ```
 
 ## How to run a server
@@ -53,4 +61,4 @@ docker run -it \
 docker run -it \
 -v $(pwd):/src \
 -e BASEURL=192.168.10.10 \
--p 1313:1313 raffaeldutra/docker-gohugo /gohugo.sh -s
+-p 1313:1313 raffaeldutra/docker-gohugo:<VERSION> /gohugo.sh -s
