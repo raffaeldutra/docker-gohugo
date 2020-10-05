@@ -32,6 +32,7 @@ elif [ "${1}" = "-s" ]; then
     --themesDir /src/themes \
     --contentDir /src/content \
     --ignoreCache \
+    --appendPort false \
     --baseURL ${BASEURL}
 fi
 
